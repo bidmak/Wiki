@@ -1,0 +1,23 @@
+{% extends "encyclopedia/layout.html" %}
+
+{% block title %}
+    Edit Page
+{% endblock %}
+
+{% block body %}
+    <p><b>Title: {{ title }}</b></p>
+    <div>
+        {% if error %}<div class="alert alert-danger" role="alert">{{ error }}</div>{% endif %}
+
+        <form action="{% url 'wiki:edit' %}" method="post">
+            {% csrf_token %}
+            <input type="hidden" name="title" value="{{ title }}">
+            <label>Edit markdown content:</label>
+            <br>
+            <textarea autofocus name="content">{{ content }}</textarea>
+            <br>
+            <input type="hidden" name="save" value="save">
+            <button type="submit" class="btn btn-primary">Save</button>
+        </form>
+    </div>
+{% endblock %}

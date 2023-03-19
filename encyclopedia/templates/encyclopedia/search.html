@@ -1,0 +1,22 @@
+{% extends "encyclopedia/layout.html" %}
+
+{% block title %}
+    Search Page
+{% endblock %}
+
+{% block search %}
+    <form>
+        <input class="search" type="text" name="q" placeholder="Search Encyclopedia">
+    </form>
+{% endblock %}
+
+{% block body %}
+    <h2>Search results</h2>
+    <ul>
+        {% for entry in new_entries %}
+            <li><a href="{% url 'wiki:TITLE' TITLE=entry %}" >{{ entry }}</a></li>
+        {% empty %}
+            <li>No result found</li>
+        {% endfor %}
+    </ul>          
+{% endblock %}
