@@ -59,3 +59,7 @@ This project is a Wiki Encyclopedia that allows users to create, edit, search, a
 4. Open the web browser and visit `http://127.0.0.1:8000` to access the Wiki encyclopedia.
 
 Feel free to explore, create new entries, edit content, search for information, and enjoy the Wiki experience!
+
+## Acknowledgments
+
+This project is part of the CS50 Web Programming with Python and JavaScript course. The distribution code and backend logic were provided by the course instructors.
